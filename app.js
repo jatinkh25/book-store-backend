@@ -16,9 +16,8 @@ const corsConfig = {
 }
 
 // middleware
-app.use(express.static('public'))
 app.use(express.json())
-// app.use(cors(corsConfig))
+app.use(cors(corsConfig))
 
 // database connection
 const dbURI = process.env.MONGODB_SERVER_URL
